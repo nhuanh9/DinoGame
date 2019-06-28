@@ -2,10 +2,10 @@ function Tree() {
     this.status = true;
     this.dx = -3;
     this.dy = 0;
-    this.width = 64;
-    this.height = 64;
+    this.width = 75;
+    this.height = 45;
     this.x = canvas.offsetWidth-this.width;
-    this.y = canvas.offsetHeight - this.height*1.2;
+    this.y = canvas.offsetHeight - this.height*1.7;
     this.img = new Image();
     this.img.src = "Tree-icon.png";
     this.draw = function () {
