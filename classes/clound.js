@@ -1,6 +1,6 @@
-function Clound(src,x) {
+function Clound(src,x,speed) {
     this.status = true;
-    this.dx = -3;
+    this.dx = speed;
     this.dy = 0;
     this.width = 64;
     this.height = 64;

@@ -4,8 +4,8 @@ let trees = [];
 let treeNormals = [];
 let dino = new Dino();
 let score = 0;
-let bird = new Clound("25382-2-flying-bird-hd-thumb.png", Math.floor(Math.random()*canvas.offsetWidth * 0.3+canvas.offsetWidth * 0.7));
-let clound = new Clound("clound.png", canvas.offsetWidth);
+let bird = new Clound("25382-2-flying-bird-hd-thumb.png", Math.floor(Math.random()*canvas.offsetWidth * 0.3+canvas.offsetWidth * 0.7),-3);
+let clound = new Clound("clound.png", canvas.offsetWidth,-1);
 
 function drawScore() {
     ctx.font = "25px Arial";

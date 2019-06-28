@@ -26,9 +26,9 @@ function TreeNormal() {
     };
     this.collisionDetectionDino = function(dino){
         let self = this;
-        let isTouchXTree = self.x+10 > dino.x && self.x+10 < dino.x + dino.width;
+        let isTouchXTree = self.x+20 > dino.x && self.x+20 < dino.x + dino.width;
         let isTouchYTree = self.y+20 > dino.y && self.y+20 < dino.y + dino.height;
-        let isTouchXDino = dino.x > self.x+10 && dino.x < self.x + self.width;
+        let isTouchXDino = dino.x > self.x+20 && dino.x < self.x + self.width;
         let isTouchYDino = dino.y > self.y+20 && dino.y < self.y + self.height;
         if ( (isTouchXTree && isTouchYTree)||(isTouchXDino && isTouchYDino)) {
             self.status = false;
