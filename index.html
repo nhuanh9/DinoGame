@@ -20,13 +20,27 @@
         .use {
             margin-top: 50px;
         }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        #HuongDan{
+            text-align: center;
+            font-size: 25px;
+        }
     </style>
 </head>
 <body>
 <center>
     <canvas id="myCanvas" width="1200" height="220"></canvas>
     <div class="use">
-        <input type="button" onclick="huongDan()" value="Hướng Dẫn">
+        <input type="button" onclick="huongDan()" value="Hướng Dẫn" class="button">
         <p id="HuongDan">
 
         </p>
