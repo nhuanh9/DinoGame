@@ -8,20 +8,35 @@
             padding: 0;
             margin: 0;
         }
-
+        body{
+            background: url(310b9fdae838e4e14c244cf3d6767c3e.jpg);
+        }
         canvas {
             background: #eee;
             display: block;
-            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .use {
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
-<canvas id="myCanvas" width="1200" height="200" ></canvas>
+<center>
+    <canvas id="myCanvas" width="1200" height="220"></canvas>
+    <div class="use">
+        <input type="button" onclick="huongDan()" value="Hướng Dẫn">
+        <p id="HuongDan">
+
+        </p>
+    </div>
+</center>
 <script src="classes/dino.js"></script>
 <script src="classes/obs.js"></script>
 <script src="classes/obs1.js"></script>
 <script src="classes/clound.js"></script>
 <script src="index.js"></script>
+<script src="use.js"></script>
 </body>
 </html>

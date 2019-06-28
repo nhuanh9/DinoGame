@@ -16,7 +16,7 @@ function Dino() {
         }
     };
     this.moveUp = function () {
-        if (this.y > 0) {
+        if (this.y > 30) {
             this.speed = 20;
             this.y -= this.speed;
         } else {

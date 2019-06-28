@@ -5,7 +5,7 @@ function Clound(src,x,speed) {
     this.width = 64;
     this.height = 64;
     this.x = x;
-    this.y = this.height*0.1;
+    this.y = this.height*0.4;
     this.img = new Image();
     this.img.src = src;
     this.draw = function () {
@@ -20,7 +20,7 @@ function Clound(src,x,speed) {
     this.collisionDetection = function () {
         if (this.x < 0){
             this.x = x;
-            this.y = this.height*0.1;
+            this.y = this.height*0.4;
         }
     };
 }
