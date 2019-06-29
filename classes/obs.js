@@ -26,10 +26,10 @@ function Tree() {
     };
     this.collisionDetectionDino = function(dino){
         let self = this;
-        let isTouchXTree = self.x+20 > dino.x && self.x+20 < dino.x + dino.width;
-        let isTouchYTree = self.y+20 > dino.y && self.y+20 < dino.y + dino.height;
-        let isTouchXDino = dino.x > self.x+20 && dino.x < self.x + self.width;
-        let isTouchYDino = dino.y > self.y+20 && dino.y < self.y + self.height;
+        let isTouchXTree = self.x > dino.x && self.x < dino.x + dino.width;
+        let isTouchYTree = self.y > dino.y && self.y < dino.y + dino.height;
+        let isTouchXDino = dino.x > self.x && dino.x < self.x + self.width;
+        let isTouchYDino = dino.y > self.y && dino.y < self.y + self.height;
         if ( (isTouchXTree && isTouchYTree)||(isTouchXDino && isTouchYDino)) {
                 self.status = false;
                 alert("GAME OVER");

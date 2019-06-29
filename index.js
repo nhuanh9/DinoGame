@@ -4,8 +4,7 @@ let trees = [];
 let treeNormals = [];
 let dino = new Dino();
 let score = 0;
-let bird = new Clound("25382-2-flying-bird-hd-thumb.png", Math.floor(Math.random()*canvas.offsetWidth * 0.3+canvas.offsetWidth * 0.7),-3);
-let clound = new Clound("clound.png", canvas.offsetWidth,-1);
+let birds = [];
 
 function drawScore() {
     ctx.font = "25px Arial";
@@ -18,7 +17,20 @@ function drawBackground() {
     img.src = "desert-background-simple-game-level-location-concept-hd-looping-animation_rfgqov0se_thumbnail-full01.png";
     ctx.drawImage(img, 0, 0)
 }
+function addBird() {
+    let bird = new Cloud();
+    birds.push(bird)
+}
 
+setInterval(addBird, 8000);
+
+function drawBird() {
+    birds = birds.filter(e => e.status);
+    birds.forEach(function (bird) {
+        bird.draw(dino);
+        bird.move();
+    })
+}
 function addTree() {
     let treeOnList = new Tree();
     trees.push(treeOnList)
@@ -49,16 +61,10 @@ function drawTreeNor() {
     })
 }
 
-function drawSt(cloud) {
-    cloud.draw();
-    cloud.move();
-}
-
 function moveTree() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBackground();
-    drawSt(clound);
-    drawSt(bird);
+    drawBird();
     dino.draw();
     drawScore();
     drawTree();
